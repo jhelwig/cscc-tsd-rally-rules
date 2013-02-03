@@ -1,0 +1,1 @@
+To compile this document, run latex on road-rally-rules.tex
