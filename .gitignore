@@ -15,3 +15,6 @@ Desktop.ini
 *.dvi
 *.ps
 *.pdf
+
+# swapfiles
+*.swp
