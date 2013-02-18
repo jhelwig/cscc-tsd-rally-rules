@@ -13,8 +13,10 @@
 \setenumerate{nolistsep}
 \setitemize{nolistsep}
 \usepackage[compact]{titlesec}
+\usepackage{graphicx}
+\usepackage{color}
 
-\usepackage[print,1to1]{booklet}
+\usepackage[noprint,1to1]{booklet}
 \usepackage{ifpdf}
 \ifpdf
   \setpdftargetpages
@@ -53,15 +55,21 @@
   }
   {\arabic{section}}{1em}{} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
 
-
-
 \pagestyle{empty}
 \begin{titlepage}
-Front cover stuff goes here.
+\begin{center}
+\includegraphics[width=2.5in]{CSCC_Logo.png}
 
-[CSCC LOGO]
+{\fontsize{80}{45} \selectfont
+ %\sffamily
+ \bfseries
+ \color{red} 
 
-Road Rally Rules 2013
+Road Rally
+
+Rules 2013
+}
+\end{center}
 \end{titlepage}
 \newpage
 
