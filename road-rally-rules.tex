@@ -42,17 +42,17 @@
   %\end{center}
   \kern3pt % space below
 }
-\newcommand{\sectionhook}{
-  \setlength{\unitlength}{1pt}
-  \begin{picture}(0,0)
-  \linethickness{1pt} % line thickness of next line
-  \put(-40,12){\line(10,0){280}} %hline vector x, vector y){length}
-  \end{picture}
-}
 
 \begin{document}
-\titleformat{\section}[hang]{\Large}{\arabic{section}}{1em}{\sectionhook} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ] see package titlesec for more info
-\titlespacing{\section}{2pt}{0pt}{1pt} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ] see package titlesec for more info
+\titlespacing{\section}{0pt}{16pt}{1pt} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ]
+\titleformat{\section}[hang]
+  {\Large
+   \titlerule[1pt] % line above section
+   \vspace{1pt} % space between line and label
+   \bfseries % make it bold
+  }
+  {\arabic{section}}{1em}{} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
+
 
 
 \pagestyle{empty}
