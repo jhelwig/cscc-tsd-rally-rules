@@ -43,18 +43,16 @@
   \kern3pt % space below
 }
 \newcommand{\sectionhook}{
-  \setlength{\unitlength}{1mm}
+  \setlength{\unitlength}{1pt}
   \begin{picture}(0,0)
-  \linethickness{.4mm} % line thickness of next line
-  \put(0,-2){\line(0,10){8}} %hline vector x, vector y){length}
-  \linethickness{.6mm} 
-  \put(0,-2){\line(10,0){6}} %vline
+  \linethickness{1pt} % line thickness of next line
+  \put(-40,12){\line(10,0){280}} %hline vector x, vector y){length}
   \end{picture}
 }
 
 \begin{document}
-\titleformat{\section}[hang]{\large}{}{1em}{\sectionhook} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ] see package titlesec for more info
-\titlespacing{\section}{6mm}{1pt}{12mm} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ] see package titlesec for more info
+\titleformat{\section}[hang]{\Large}{\arabic{section}}{1em}{\sectionhook} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ] see package titlesec for more info
+\titlespacing{\section}{2pt}{0pt}{1pt} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ] see package titlesec for more info
 
 
 \pagestyle{empty}
@@ -109,51 +107,22 @@ For up-to-date information about CSCC road rallies:
 
 \pagenumbering{arabic}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{procedures.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{rally-route.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{main-road-determinants.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{route-instructions.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{signs.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{glossary.tex}
 
-%\appendix
-
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{appendix.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{points.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{TSD_formulas.tex}
 
 \newpage
