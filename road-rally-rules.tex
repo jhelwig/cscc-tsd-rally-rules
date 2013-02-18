@@ -14,9 +14,9 @@
 \setitemize{nolistsep}
 \usepackage[compact]{titlesec}
 \usepackage{graphicx}
-\usepackage{color}
+\usepackage{pdfpages}
 
-\usepackage[noprint,1to1]{booklet}
+\usepackage[print,1to1]{booklet}
 \usepackage{ifpdf}
 \ifpdf
   \setpdftargetpages
@@ -56,22 +56,9 @@
   {\arabic{section}}{1em}{} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
 
 \pagestyle{empty}
-\begin{titlepage}
-\begin{center}
-\includegraphics[width=2.5in]{CSCC_Logo.png}
 
-{\Huge
- \sffamily
- \bfseries
- \color{red} 
+\includepdf[pages=1]{Cover.pdf}
 
-Road Rally
-
-Rules 2013
-}
-\end{center}
-\end{titlepage}
-\newpage
 
 Welcome to the Cascade Sports Car Club's Road Rally Program. If you are new to the sport or the area, feel free to contact a Geargrinders road rally official for information or advice.
 
@@ -133,10 +120,12 @@ For up-to-date information about CSCC road rallies:
 
 \input{TSD_formulas.tex}
 
-\newpage
+\cleardoublepage
 
-\begin{titlepage}
-FINAL COVER
-\end{titlepage}
+\setlength{\unitlength}{1in}
+\begin{picture}(5.5,8.5)
+  %\includepdf[pages=1]{BackCover.pdf}
+  \put(-.75,0){\includegraphics[width=5.5in]{BackCover.pdf}}
+\end{picture}
 
 \end{document}
