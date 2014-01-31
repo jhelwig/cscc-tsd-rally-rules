@@ -1,14 +1,29 @@
-\documentclass[letterpaper,10pt]{article}
-\setlength{\textheight}{419pt}   \setlength{\textwidth}{289pt}
-\setlength{\oddsidemargin}{72pt} \setlength{\evensidemargin}{108pt}
-\setlength{\topmargin}{55.9pt}   \setlength{\footskip}{27.5pt}
+\documentclass[letterpaper,12pt]{article}
+
+%\setlength{\textheight}{419pt}   \setlength{\textwidth}{289pt}
+%\setlength{\oddsidemargin}{72pt} \setlength{\evensidemargin}{108pt}
+%\setlength{\topmargin}{55.9pt}   \setlength{\footskip}{27.5pt}
+%\setlength{\headheight}{14.6pt}  \setlength{\headsep}{19.9pt}
+
+\setlength{\textheight}{510pt}   \setlength{\textwidth}{310pt}
+\setlength{\oddsidemargin}{75pt} \setlength{\evensidemargin}{75pt}
+\setlength{\topmargin}{25pt}     \setlength{\footskip}{27.5pt}
 \setlength{\headheight}{14.6pt}  \setlength{\headsep}{19.9pt}
 
-%\setlength{\parindent}{0pt}
-%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
-\usepackage[noprint,1to1]{booklet}
-\usepackage{enumerate}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% reduce spacing in itemize, enumerate and titles
+% found http://tex.stackexchange.com/questions/51312/reduce-vertical-spacing-itemize-and-multicols#51313
+\usepackage{enumitem}
+\setenumerate{nolistsep}
+\setitemize{nolistsep}
+\usepackage[compact]{titlesec}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+
+\usepackage[print,1to1]{booklet}
 \usepackage{ifpdf}
 \ifpdf
   \setpdftargetpages
@@ -24,127 +39,84 @@
   \stepcounter{subsection}
   \subsection*{\arabic{section}.\arabic{subsection}\hspace{1em}{#1}}
 }
-\newcommand{\hiddensubsubsection}[1]{
-  \stepcounter{subsubsection}
-  \subsection*{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\hspace{1em}{#1}}
+\newcommand{\tinyitem}[1]{
+  {\footnotesize \item #1}
+}
+\newcommand{\myline}{
+  \par
+  %\begin{center}
+  \kern3pt % space above
+  \hrule height 1pt % actual line
+  %\line(1,0){250}
+  %\end{center}
+  \kern3pt % space below
 }
 
 \begin{document}
+\titlespacing{\section}{0pt}{16pt}{1pt} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ]
+\titleformat{\section}[hang]
+  {\Large
+   \titlerule[1pt] % line above section
+   \vspace{1pt} % space between line and label
+   \bfseries % make it bold
+  }
+  {\arabic{section}}{1em}{} %\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
 
 \pagestyle{empty}
-\begin{titlepage}
-Front cover stuff goes here.
 
-[CSCC LOGO]
+\includepdf[pages=1]{Cover.pdf}
 
-Road Rally Rules 2013
-\end{titlepage}
-\newpage
+Welcome to the Cascade Sports Car Club's Road Rally Program. If you are new to the sport or the area, feel free to contact a Geargrinders road rally official for information or advice.
 
-Welcome to the Cascade Sports Car Club's Road Rally Program. If you are new to
-the sport or the area, feel free to contact a Geargrinders road rally official
-for information or advice.
+CSCC's time-speed-distance road rallies are conducted in accordance with these Road Rally Rules. These rules may be modified by supplemental rules specific to the event.
 
-CSCC's time-speed-distance road rallies are conducted in accordance with these
-Road Rally Rules. These rules may be modified by supplemental rules specific to
-the event.
+The object of a time-speed-distance road rally is to complete the rally route \textbf{on course} and as close to \textbf{on time} as possible. Being \textbf{on course} refers to arriving at official checkpoints having followed the route intended by the rallymaster. Being \textbf{on time} refers to arriving at official checkpoints having taken the amount of time intended by the rallymaster.
 
-The object of a time-speed-distance road rally is to complete the rally route
-\textbf{on course} and as close to \textbf{on time} as possible. Being \textbf{on
-course} refers to arriving at official checkpoints having followed the route
-intended by the rallymaster. Being \textbf{on time} refers to arriving at official
-checkpoints having taken the amount of time intended by the rallymaster.
+\textbf{Official time} -- intended or allowed time -- is the amount of time it takes to drive the intended route at the average speeds specified in the route instructions. The rally route is measured in thousandths of a mile from speed change to speed change. Allowed time is computed to the nearest hundredth of a minute.
 
-\textbf{Official time} -- indended or allowed time -- is the amount of
-time it takes to drive the intended route at the average speeds specified in the
-route instructions. The rally route is measured in thousandths of a mile from
-speed change to speed change. Allowed time is computed to the nearest hundredth
-of a minute.
+Each hundredth of a minute that you arrive early or late on each leg is worth one \textbf{penalty point}. A perfect leg score is \textbf{zero}, arriving exactly on time. The maximum number of penalty points for any one leg is 300. If you are three or more minutes early or late on any leg, your score for that leg is 300.
 
-Each hundredth of a minute that you arrive early or late on each leg is worth
-one \textbf{penalty point}. A perfect leg score is \textbf{zero}, arriving exactly
-on time. The maximum number of penalty points for any one leg is 300. If you are
-three or more minutes early or late on any leg, your score for that leg is 300.
+\myline
 
-\begin{center}
-\line(1,0){250}
-\end{center}
-
-To learn more about Cascade Sports Car Club's activities, visit www.cascadesportscarclub.org or write to: CSCC, P.O. Box 4304, Portland, OR 97208.
-
-You are welcome to attend general club meetings on the first Saturday of each month, 8 p.m. (7 p.m. during winter), Stark Street Pizza, SE 92nd and Stark, Portland, Oregon.
-
-For up-to-date information about CSCC Road rallies:
-\begin{itemize}
-  \item Call: 541-331-8651
-  \item E-mail: rally@cascadesportscarclub.org
-  \item Visit: www.cascadesportscarclub.org
-  \item Join the Geargrinders Forum (search geargrinders) at http://groups.yahoo.com
-\end{itemize}
+To learn more about Cascade Sports Car Club's activities visit: www.cascadesportscarclub.org
 
 \cleardoublepage
 
-\pagenumbering{roman}
+\pagenumbering{arabic}
 
 \tableofcontents
 
-\cleardoublepage
+\clearpage
 
 \pagestyle{plain}
 
 \pagenumbering{arabic}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{procedures.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{rally-route.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{main-road-determinants.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{route-instructions.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{signs.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{glossary.tex}
 
-%\appendix
-
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{appendix.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{points.tex}
 
-\begin{center}
-\line(1,0){250}
-\end{center}
 \input{TSD_formulas.tex}
 
-\newpage
+\pagestyle{empty}
 
-\begin{titlepage}
-FINAL COVER
-\end{titlepage}
+\setlength{\unitlength}{1in}
+%\includepdf[pages=1]{BackCover.pdf}
+
+\begin{picture}(5.5,8.5)
+  \put(-.25,0){\includegraphics[width=5.5in]{BackCover.pdf}}
+\end{picture}
 
 \end{document}
