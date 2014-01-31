@@ -23,7 +23,11 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 
-\usepackage[print,1to1]{booklet}
+% !! UNCOMMENT FOR BOOK
+%\usepackage[print,1to1]{booklet}
+
+% !! UNCOMMENT FOR WEBSAFE PDF (ie pages are linear)
+\usepackage[1to1]{booklet}
 \usepackage{ifpdf}
 \ifpdf
   \setpdftargetpages
