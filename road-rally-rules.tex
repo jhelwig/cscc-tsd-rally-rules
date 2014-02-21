@@ -39,6 +39,12 @@
   \special{!TeXDict begin <</Tumble true>> setpagedevice end}
 \fi
 
+% Here for reference on how to change the display formatting of
+% subsection & subsubsection numbering.  Currently breaks formatting.
+%
+% \renewcommand{\thesubsection}{\roman{subsection}}
+% \renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
 \newcommand{\hiddensubsection}[1]{
   \stepcounter{subsection}
   \subsection*{\arabic{section}.\arabic{subsection}\hspace{1em}{#1}}
