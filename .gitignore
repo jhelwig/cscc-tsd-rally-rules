@@ -14,7 +14,8 @@ Desktop.ini
 *.toc
 *.dvi
 *.ps
-*.pdf
+#*.pdf # seems worse then expected
+*draft*.pdf
 
 # swapfiles
 *.swp
