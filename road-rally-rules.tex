@@ -31,10 +31,10 @@
 \usepackage{pdfpages}
 
 % !! UNCOMMENT FOR BOOK
-%\usepackage[print,1to1]{booklet}
+\usepackage[print,1to1]{booklet}
 
 % !! UNCOMMENT FOR WEBSAFE PDF (ie pages are linear)
-\usepackage[1to1]{booklet}
+%\usepackage[1to1]{booklet}
 \usepackage{ifpdf}
 \ifpdf
   \setpdftargetpages
@@ -69,6 +69,9 @@
   \kern3pt % space below
 }
 
+\widowpenalty=500
+\clubpenalty=500
+
 \begin{document}
 \titlespacing{\section}{0pt}{16pt}{1pt} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ]
 \titleformat{\section}[hang]
@@ -81,7 +84,12 @@
 
 \pagestyle{empty}
 
-\includepdf[pages=1]{Cover.pdf}
+%\includepdf[pages=1,offset=100 -100,scale=.92]{Cover.pdf}
+\includepdf[pages=1,offset=0 -30,scale=.8]{Cover.pdf}
+
+%\begin{picture}(5.5,8.5)
+%  \put(-500,-600){\includegraphics[width=5.5in]{Cover.pdf}}
+%\end{picture}
 
 Welcome to the Cascade Sports Car Club's Road Rally Program. If you are new to the sport or the area, feel free to contact a Geargrinders road rally official for information or advice.
 
@@ -133,7 +141,8 @@ To learn more about Cascade Sports Car Club's activities visit: www.cascadesport
 %\includepdf[pages=1]{BackCover.pdf}
 
 \begin{picture}(5.5,8.5)
-  \put(-.25,0){\includegraphics[width=5.5in]{BackCover.pdf}}
+  %\put(-.25,0){\includegraphics[width=5.5in]{BackCover.pdf}}
+  \put(-.55,1){\includegraphics[width=5.4in]{BackCover.pdf}}
 \end{picture}
 
 \end{document}
