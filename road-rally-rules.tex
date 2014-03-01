@@ -29,22 +29,12 @@
 \usepackage[compact]{titlesec}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{ifpdf}
 
 % !! UNCOMMENT FOR BOOK
 \usepackage[print,1to1]{booklet}
-
 % !! UNCOMMENT FOR WEBSAFE PDF (ie pages are linear)
-%\usepackage[1to1]{booklet}
-\usepackage{ifpdf}
-\ifpdf
-  \setpdftargetpages
-\else
-  \setdvipstargetpages
-\fi
-\ifprintoption
-  \special{!TeXDict begin /landplus90{true}store end}
-  \special{!TeXDict begin <</Tumble true>> setpagedevice end}
-\fi
+%\usepackage[noprint,1to1]{booklet}
 
 % Here for reference on how to change the display formatting of
 % subsection & subsubsection numbering.  Currently breaks formatting.
@@ -73,6 +63,16 @@
 \clubpenalty=500
 
 \begin{document}
+\ifpdf
+  \setpdftargetpages
+\else
+  \setdvipstargetpages
+\fi
+\ifprintoption
+  \special{!TeXDict begin /landplus90{true}store end}
+  \special{!TeXDict begin <</Tumble true>> setpagedevice end}
+\fi
+
 \titlespacing{\section}{0pt}{16pt}{1pt} %\titlespacing{ command }{ left }{ beforesep }{ aftersep }[ right ]
 \titleformat{\section}[hang]
   {\Large
