@@ -18,4 +18,9 @@ Desktop.ini
 *draft*.pdf
 
 # swapfiles
-*.swp
+*.sw?
+\#*\#
+
+# Built files
+/build/
+/output/
