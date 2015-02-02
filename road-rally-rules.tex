@@ -31,10 +31,14 @@
 \usepackage{pdfpages}
 \usepackage{ifpdf}
 
-% !! UNCOMMENT FOR BOOK
-\usepackage[print,1to1]{booklet}
-% !! UNCOMMENT FOR WEBSAFE PDF (ie pages are linear)
-%\usepackage[noprint,1to1]{booklet}
+\ifx\compileforwebpdf\undefined
+  % BOOK
+  \usepackage[print,1to1]{booklet}
+\else
+  % WEB-SAFE PDF (ie pages are linear)
+  \usepackage[noprint,1to1]{booklet}
+\fi
+
 
 % Here for reference on how to change the display formatting of
 % subsection & subsubsection numbering.  Currently breaks formatting.
