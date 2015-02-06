@@ -12,7 +12,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    width="495"
    height="765"
    xml:space="preserve"
@@ -62,16 +62,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1278"
-     inkscape:window-height="782"
+     inkscape:window-height="771"
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.72418301"
      inkscape:cx="82.080329"
      inkscape:cy="317.46715"
      inkscape:window-x="0"
-     inkscape:window-y="16"
+     inkscape:window-y="27"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer2" /><g
+     inkscape:current-layer="g14" /><g
      id="g10"
      inkscape:groupmode="layer"
      inkscape:label="Cover"
@@ -122,11 +122,11 @@
            transform="matrix(0.24,0,0,0.24,153.1766,146.88)"><text
              transform="scale(1,-1)"
              id="text48"><tspan
-               style="font-size:150px;font-variant:normal;font-weight:900;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial-Black"
+               style="font-variant:normal;font-weight:900;font-size:150px;font-family:Arial;-inkscape-font-specification:Arial-Black;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
                x="0 100.05"
                y="0"
                sodipodi:role="line"
-               id="tspan50">2014</tspan></text>
+               id="tspan50">2015</tspan></text>
 </g><g
            id="g52"
            transform="matrix(0.24,0,0,0.24,246.0234,146.88)" /></g></g><g
